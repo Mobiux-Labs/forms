@@ -54,6 +54,14 @@ const isFieldRegistered = (fieldType: string) => {
   return !!fieldRegistry.get(fieldType);
 };
 
+export type FieldRegistryType = {
+  isRegistered: (type: string) => boolean;
+  register: (
+    fieldType: string,
+    Component: (props: FieldProps<any>) => React.ReactNode
+  ) => void;
+};
+
 export const FieldRegistry = {
   isRegistered: isFieldRegistered,
   register: registerField,
