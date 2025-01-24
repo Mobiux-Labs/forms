@@ -10,11 +10,11 @@ To install Mobiux Labs Forms, use npm or yarn. Run one of the following commands
 #### Using npm
 
 ```bash
-npm install @mobiux-labs/forms-core
+npm install @mobiux-labs/form-core
 ```
 
 #### Using yarn
 
 ```bash
-yarn add @mobiux-labs/forms-core
+yarn add @mobiux-labs/form-core
 ```
