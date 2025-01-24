@@ -1,5 +1,5 @@
 import { FieldDefinitionBase } from '@mobiux-labs/form-core';
-import { CustomSelectProps } from './renderer-select';
+import { CustomSelectProps } from './select-field';
 
 export type SelectFieldDefinition = FieldDefinitionBase<
   'select', // Field type for rendering a select component

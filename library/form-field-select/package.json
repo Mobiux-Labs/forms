@@ -1,12 +1,35 @@
 {
   "name": "@mobiux-labs/form-field-select",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.js",
   "types": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://mobiux-labs.github.io/forms/docs/form-renderer/fields/extended/select",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.js"
+      "require": "./index.js",
+      "types": "./index.d.ts"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/Mobiux-Labs/forms/issues/new",
+    "email": "developers@mobiux.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mobiux-Labs/forms.git"
+  },
+  "author": "Mobiux Labs",
+  "license": "MIT",
+  "dependencies": {
+    "react-hook-form": ">7.50.0",
+    "react-select": ">5.8.0",
+    "@mobiux-labs/form-core": "<1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
   }
 }

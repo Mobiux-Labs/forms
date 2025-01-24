@@ -11,7 +11,7 @@ import CustomColorField from './custom-fields/CustomColorField';
 import SelectField from '@mobiux-labs/form-field-select';
 
 // Initialize the SelectField component
-SelectField.init();
+SelectField.init(FieldRegistry);
 
 FieldRegistry.register('color', CustomColorField);
 

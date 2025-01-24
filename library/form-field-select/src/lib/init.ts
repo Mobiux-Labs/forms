@@ -1,8 +1,8 @@
-import { FieldRegistry } from '@mobiux-labs/form-core';
-import SelectField from './renderer-select';
+import { FieldRegistryType } from '@mobiux-labs/form-core';
+import SelectField from './select-field';
 
-export const initialize = () => {
-  if (!FieldRegistry.isRegistered('select')) {
-    FieldRegistry.register('select', SelectField);
+export const initialize = (fieldRegistry: FieldRegistryType) => {
+  if (!fieldRegistry.isRegistered('select')) {
+    fieldRegistry.register('select', SelectField);
   }
 };
