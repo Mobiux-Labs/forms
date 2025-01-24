@@ -12,7 +12,7 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://mobiux-labs-form.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  baseUrl: '/forms',
 
   // GitHub pages deployment config.
   organizationName: 'Mobiux-Labs', // Your GitHub org/user name.
