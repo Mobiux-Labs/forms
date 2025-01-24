@@ -19,14 +19,15 @@ npm install @mobiux-labs/form-field-select
 
 To set up the select field component in your React application, follow these steps:
 
-1. **Initialize the SelectField**: Import the `SelectField` from the package and call the `init` function to initialize it in your application. It's recommended to place this initialization outside of any component, preferably at the top level of your component hierarchy, such as in your main application file.
+1. **Initialize the SelectField**: Import the `SelectField` from the package and call the `init` function to initialize it in your application. Additionally, import the `FieldRegistry` from the `@mobiux-labs/form-core` package. Pass the `FieldRegistry` as an argument to the `init` function. It's recommended to place this initialization outside of any component, preferably at the top level of your component hierarchy, such as in your main application file.
 
-   ```tsx
-   import SelectField from '@mobiux-labs/form-field-select';
+```tsx
+import SelectField from '@mobiux-labs/form-field-select';
+import { FieldRegistry } from '@mobiux-labs/form-core';
 
-   // Initialize the SelectField component
-   SelectField.init();
-   ```
+// Initialize the SelectField component with FieldRegistry
+SelectField.init(FieldRegistry);
+```
 
 By placing the initialization at the top level, you ensure that the SelectField is properly set up before any components that use it are rendered.
 
