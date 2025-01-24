@@ -56,7 +56,7 @@ To use the Select Field, define the field in your form configuration with the de
 
 #### Normal Select
 
-```json
+```tsx
 {
   "formKey": "category",
   "type": "select",
@@ -67,20 +67,21 @@ To use the Select Field, define the field in your form configuration with the de
     "error": "error-text"
   },
   "fieldProps": {
-    "defaultOptions": [
+    "variant": "normal",
+    "options": [
       { "value": "chocolate", "label": "Chocolate" },
       { "value": "strawberry", "label": "Strawberry" },
       { "value": "vanilla", "label": "Vanilla" }
-    ]
+    ],
   },
   "className": "pt-2", // Optional
-  "onChange": "function to handle change events" // Optional
+  "onChange": (value) => {} // Optional
 }
 ```
 
 #### Async Select
 
-```json
+```tsx
 {
   "formKey": "category",
   "type": "select",
@@ -91,16 +92,26 @@ To use the Select Field, define the field in your form configuration with the de
     "error": "error-text"
   },
   "fieldProps": {
-    "loadOptions": "async function to load options"
+    "variant": "async",
+    "defaultOptions": [
+      { "value": "chocolate", "label": "Chocolate" },
+      { "value": "strawberry", "label": "Strawberry" },
+      { "value": "vanilla", "label": "Vanilla" }
+    ]
+    "loadOptions": async (value: string) => {
+      // Api call and return data, mostly for search feature
+      // console.log('value', value);
+      return []; // return list of { "value": "", "label": "" }
+    },
   },
   "className": "pt-2", // Optional
-  "onChange": "function to handle change events" // Optional
+  "onChange": (value) => {} // Optional
 }
 ```
 
 #### Creatable Select
 
-```json
+```tsx
 {
   "formKey": "category",
   "type": "select",
@@ -112,21 +123,23 @@ To use the Select Field, define the field in your form configuration with the de
   },
   "fieldProps": {
     "variant": "creatable",
-    "defaultOptions": [
+    "options": [
       { "value": "chocolate", "label": "Chocolate" },
       { "value": "strawberry", "label": "Strawberry" },
       { "value": "vanilla", "label": "Vanilla" }
     ],
-    "onCreateOption": "async function to handle option creation"
+    "onCreateOption": async (value: string) => {
+      // console.log('create one with', value);
+    },
   },
   "className": "pt-2", // Optional
-  "onChange": "function to handle change events" // Optional
+  "onChange": (value) => {} // Optional
 }
 ```
 
 #### Async-Creatable Select
 
-```json
+```tsx
 {
   "formKey": "category",
   "type": "select",
@@ -144,11 +157,17 @@ To use the Select Field, define the field in your form configuration with the de
       { "value": "strawberry", "label": "Strawberry" },
       { "value": "vanilla", "label": "Vanilla" }
     ],
-    "loadOptions": "async function to load options",
-    "onCreateOption": "async function to handle option creation"
+    "loadOptions": async (value: string) => {
+      // Api call and return data, mostly for search feature
+      // console.log('value', value);
+      return []; // return list of { "value": "", "label": "" }
+    },
+    "onCreateOption": async (value: string) => {
+      // console.log('create one with', value);
+    },
   },
   "className": "pt-2", // Optional
-  "onChange": "function to handle change events" // Optional
+  "onChange": (value) => {} // Optional
 }
 ```
 
