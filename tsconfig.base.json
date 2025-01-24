@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mobiux-labs/form-core": ["library/form-core/src/index.ts"]
+      "@mobiux-labs/form-core": ["library/form-core/src/index.ts"],
+      "@mobiux-labs/form-field-select": [
+        "library/form-field-select/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

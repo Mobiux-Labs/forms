@@ -1,0 +1,9 @@
+{
+  "name": "@mobiux-labs/form-field-select",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "library/form-field-select/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @mobiux-labs/form-field-select --web",
+  "targets": {}
+}
