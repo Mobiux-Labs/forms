@@ -1,6 +1,6 @@
 {
   "name": "@mobiux-labs/form-core",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A core library for form handling in React applications.",
   "main": "./index.js",
   "module": "./index.mjs",
@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.js"
+      "require": "./index.js",
+      "types": "./index.d.ts"
     }
   },
   "bugs": {
@@ -35,8 +36,7 @@
     "react-hook-form": ">7.50.0"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {}
 }
