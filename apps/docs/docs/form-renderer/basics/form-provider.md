@@ -62,5 +62,3 @@ export default MyFormComponent;
 ## Conclusion
 
 The `FormProvider` offers a robust solution for managing form states and methods, ensuring each form renderer has dedicated storage while maintaining global consistency.
-
-For more details, refer to the [API documentation](link-to-api-docs).

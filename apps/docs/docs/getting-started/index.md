@@ -33,7 +33,3 @@ Mobiux Labs Forms relies on the following:
 
 - **React**: Ensures a modern and efficient UI.
 - **React Hook Form**: Manages form state and validation, offering a performant and flexible solution.
-
-## License
-
-Mobiux Labs Forms is licensed under the [Your License] license. For more details, see the [LICENSE](link-to-license) file.

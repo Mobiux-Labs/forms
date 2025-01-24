@@ -56,5 +56,3 @@ export default MyForm;
 ## Conclusion
 
 The `FormRenderer` is essential for preparing the form environment and managing form state, serving as a wrapper for `FormFields` to render form elements effectively.
-
-For more details, refer to the [API documentation](link-to-api-docs).

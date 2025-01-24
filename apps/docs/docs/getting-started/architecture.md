@@ -38,5 +38,3 @@ Mobiux Labs Forms simplifies form management in React applications with three co
 ## Conclusion
 
 Mobiux Labs Forms offers a streamlined, flexible approach to form management in React, leveraging React context and `react-hook-form` for efficient form creation and styling.
-
-For more details, see the [API documentation](link-to-api-docs) and [examples](link-to-examples).
