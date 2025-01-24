@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Architecture
 
-Mobiux Labs Forms simplifies form management in React applications with three core components: `FormProvider`, `FormRenderer`, and `FormFields`. This architecture supports client-side rendering only.
+Mobiux Labs Form simplifies form management in React applications with three core components: `FormProvider`, `FormRenderer`, and `FormFields`. This architecture supports client-side rendering only.
 
 ## Core Components
 
@@ -37,4 +37,4 @@ Mobiux Labs Forms simplifies form management in React applications with three co
 
 ## Conclusion
 
-Mobiux Labs Forms offers a streamlined, flexible approach to form management in React, leveraging React context and `react-hook-form` for efficient form creation and styling.
+Mobiux Labs Form offers a streamlined, flexible approach to form management in React, leveraging React context and `react-hook-form` for efficient form creation and styling.

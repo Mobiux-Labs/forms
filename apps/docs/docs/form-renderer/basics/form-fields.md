@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Form Fields
 
-`FormFields` is a flexible component in Mobiux Labs Forms that creates form elements from specified field definitions, integrating smoothly with the form's context.
+`FormFields` is a flexible component in Mobiux Labs Form that creates form elements from specified field definitions, integrating smoothly with the form's context.
 
 ## Key Responsibilities
 

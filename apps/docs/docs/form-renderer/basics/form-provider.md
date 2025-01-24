@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Form Provider
 
-The `FormProvider` is a core component in Mobiux Labs Forms, managing form states, methods, and styles through a centralized React context.
+The `FormProvider` is a core component in Mobiux Labs Form, managing form states, methods, and styles through a centralized React context.
 
 ## Key Responsibilities
 

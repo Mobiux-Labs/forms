@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Installation
 
-To install Mobiux Labs Forms, use npm or yarn. Run one of the following commands in your project directory:
+To install Mobiux Labs Form, use npm or yarn. Run one of the following commands in your project directory:
 
 #### Using npm
 

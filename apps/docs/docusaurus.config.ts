@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Mobiux labs form',
+  title: '@mobiux-labs',
   tagline: 'Effortless Form Management',
   favicon: 'img/favicon.ico',
 
@@ -89,6 +89,10 @@ const config: Config = {
             {
               label: 'Github',
               href: 'https://github.com/Mobiux-Labs/forms',
+            },
+            {
+              label: 'NPM',
+              href: 'https://www.npmjs.com/package/@mobiux-labs/form-core',
             },
           ],
         },
