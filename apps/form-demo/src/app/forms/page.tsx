@@ -8,6 +8,10 @@ import {
   useFormContext,
 } from '@mobiux-labs/form-core';
 import CustomColorField from './custom-fields/CustomColorField';
+import SelectField from '@mobiux-labs/form-field-select';
+
+// Initialize the SelectField component
+SelectField.init();
 
 FieldRegistry.register('color', CustomColorField);
 

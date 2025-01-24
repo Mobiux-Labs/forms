@@ -2,10 +2,15 @@ import { ColorFieldDefinition } from './custom-fields/CustomColorField';
 import React from 'react';
 import { Add, Trash } from 'iconsax-react';
 import { FieldDefinition, StateData } from '@mobiux-labs/form-core';
+import { SelectFieldDefinition } from '@mobiux-labs/form-field-select';
 
 type Props = StateData | undefined;
 
-type SchemaType = (FieldDefinition | ColorFieldDefinition)[];
+type SchemaType = (
+  | FieldDefinition
+  | SelectFieldDefinition
+  | ColorFieldDefinition
+)[];
 
 export type ReturnType = {
   schema: SchemaType;
@@ -163,6 +168,37 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
       className: 'text-bold !pb-0',
       style: {
         content: 'label-xs',
+      },
+    },
+    {
+      formKey: 'category',
+      type: 'select',
+      style: {
+        select: 'select',
+        option: 'select-option',
+        label: 'label-sm',
+        error: 'error-text',
+      },
+      fieldProps: {
+        variant: 'async-creatable',
+        isMulti: true,
+        defaultOptions: [
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'vanilla', label: 'Vanilla' },
+        ],
+        loadOptions: async (value: string) => {
+          // Api call and return data, mostly for search feature
+          // console.log('value', value);
+          return [];
+        },
+        onCreateOption: async (value: string) => {
+          // console.log('create one with', value);
+        },
+      },
+      className: 'pt-2',
+      onChange: (value: string | string[] | undefined) => {
+        // console.log('on change =>', value);
       },
     },
     {
