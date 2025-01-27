@@ -36,7 +36,3 @@ const fieldDefinitions: FieldDefinition[] = [
 - **Dynamic Behavior**: The disabled state can be dynamically controlled based on form state or other conditions, allowing for flexible form interactions.
 
 By utilizing the `disabled` property, you can create forms that adapt to user interactions and application logic, enhancing the user experience.
-
-```
-
-```

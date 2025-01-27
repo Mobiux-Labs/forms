@@ -31,6 +31,7 @@ Mobiux Labs Form simplifies form management in React applications with three cor
       formName='myForm'
       definitions={fieldDefinitionsTwo}
     />
+    <button type='submit'> Submit </button>
   </FormRenderer>
 </FormProvider>
 ```
