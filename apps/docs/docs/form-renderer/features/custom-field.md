@@ -38,7 +38,7 @@ import {
 import React from 'react';
 
 export type ColorFieldDefinition = FieldDefinitionBase<
-  'color',
+  'custom_color',
   string,
   React.ReactNode,
   { input: string; label: string; error: string }
@@ -105,7 +105,7 @@ import { FieldRegistry } from '@mobiux-labs/form-core';
 import CustomColorField from './CustomColorField';
 
 // Register your custom components here
-FieldRegistry.register('color', CustomColorField);
+FieldRegistry.register('custom_color', CustomColorField);
 
 const MyComponent = () => {
   return <FormRenderer>{/* Form content */}</FormRenderer>;
@@ -124,8 +124,8 @@ import { FieldRegistry } from '@mobiux-labs/form-core';
 import CustomColorField from './CustomColorField';
 
 const MyComponent = () => {
-  if (!FieldRegistry.isRegistered('color')) {
-    FieldRegistry.register('color', CustomColorField);
+  if (!FieldRegistry.isRegistered('custom_color')) {
+    FieldRegistry.register('custom_color', CustomColorField);
   }
 
   return <FormRenderer>{/* Form content */}</FormRenderer>;
