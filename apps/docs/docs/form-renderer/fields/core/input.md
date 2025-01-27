@@ -33,7 +33,7 @@ The `InputField` component provides a versatile way to capture various types of 
 
 :::danger[Warning]
 
-Input types like **checkbox**, **radio**, and **file** are not supported as they do not provide values directly to `e.target.value`.
+Input types like **checkbox**, **radio**, and **file** are not supported as they do need different kind of implementation
 
 :::
 
