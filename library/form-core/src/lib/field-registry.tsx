@@ -2,6 +2,7 @@
 import ArrayFields from './fields/basics/ArrayFields';
 import CheckboxField from './fields/basics/CheckboxField';
 import InputField from './fields/basics/InputField';
+import RadioField from './fields/basics/RadioField';
 import ContainerField from './fields/layout-and-space/ContainerField';
 import DividerField from './fields/layout-and-space/DividerField';
 import HeadingField from './fields/typography/HeadingField';
@@ -39,6 +40,7 @@ fieldRegistry.set('color', (props) => setupField(props, InputField));
 fieldRegistry.set('range', (props) => setupField(props, InputField));
 fieldRegistry.set('hidden', (props) => setupField(props, InputField));
 fieldRegistry.set('checkbox', (props) => setupField(props, CheckboxField));
+fieldRegistry.set('radio', (props) => setupField(props, RadioField));
 fieldRegistry.set('array', (props) => setupField(props, ArrayFields));
 
 // Layout, spacers and typography components

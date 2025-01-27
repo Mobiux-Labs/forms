@@ -8,6 +8,7 @@ import {
   ArrayFieldStyleProps,
 } from '../fields/basics/ArrayFields';
 import { InputFieldTypes } from '../fields/basics/InputField';
+import { RadioFieldDefinition } from '../fields/basics/RadioField';
 
 // Exporting the generic FieldDefinition type
 export type FieldDefinitionBase<T extends string, V, P, S> = {
@@ -80,6 +81,7 @@ type Typography = HeadingFieldDefinition | ParagraphFieldDefinition;
 export type FieldDefinition =
   | InputFieldDefinition
   | CheckboxFieldDefinition
+  | RadioFieldDefinition
   | NumberFieldDefinition
   | ArrayFieldDefinition
   | LayoutAndSpacers
