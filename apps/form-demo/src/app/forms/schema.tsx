@@ -19,6 +19,12 @@ export type ReturnType = {
 const formSchema: (prop: Props) => ReturnType = (props: Props) => {
   const { methods, formData } = props || {};
 
+  const SELECT_FIELDS = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
+
   const schema: SchemaType = [
     {
       formKey: 'first_name',
@@ -51,6 +57,11 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
       label: 'Temporary Address ',
       type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
+      onChange: (value: string) => {
+        if (formData?.same_as_temp) {
+          methods?.setValue('perm_address', value);
+        }
+      },
     },
     {
       formKey: 'perm_address',
@@ -73,9 +84,6 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
         description: 'label-xs',
       },
       fieldProps: {
-        title: 'Form Controls',
-        description:
-          'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum sint iusto aliquam eius',
         fields: [
           {
             formKey: 'same_as_temp',
@@ -136,13 +144,41 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
       },
     },
     {
+      formKey: 'subscription',
+      label: 'Subscription',
+      type: 'radio',
+      style: {
+        input: 'input-checkbox',
+        label: 'label-sm',
+        error: 'error-text',
+        optionLabel: 'label-xs',
+      },
+      fieldProps: {
+        options: [
+          {
+            value: 'basic',
+            label: 'Basic',
+          },
+          {
+            value: 'standard',
+            label: 'Standard',
+          },
+          {
+            value: 'premium',
+            label: 'Premium',
+          },
+        ],
+      },
+      className: 'pt-2',
+    },
+    {
       type: 'divider',
       className: 'my-2',
     },
     {
       formKey: 'color',
       label: 'Pick Color (Custom field)',
-      type: 'color',
+      type: 'custom_color',
       style: { input: 'input-color', label: 'label-sm', error: 'error-text' },
     },
     {
@@ -182,15 +218,10 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
       fieldProps: {
         variant: 'async-creatable',
         isMulti: true,
-        defaultOptions: [
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'vanilla', label: 'Vanilla' },
-        ],
-        loadOptions: async (value: string) => {
+        defaultOptions: SELECT_FIELDS,
+        loadOptions: async function (value: string) {
           // Api call and return data, mostly for search feature
-          // console.log('value', value);
-          return [];
+          return SELECT_FIELDS.filter((field) => field.label.includes(value));
         },
         onCreateOption: async (value: string) => {
           // console.log('create one with', value);

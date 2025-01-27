@@ -6,7 +6,7 @@ import {
 import React from 'react';
 
 export type ColorFieldDefinition = FieldDefinitionBase<
-  'color',
+  'custom_color',
   string,
   React.ReactNode,
   { input: string; label: string; error: string }

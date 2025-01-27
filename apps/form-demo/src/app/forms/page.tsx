@@ -37,7 +37,7 @@ const FormsPage = () => {
           onSubmit={handleSubmit}
           styles={{
             'input-md': `w-full rounded-md p-2 bg-[#44444430] text-[#000000]`,
-            'input-checkbox': 'ml-2',
+            'input-checkbox': 'mr-2',
             'input-color': 'ml-2',
             'label-xs': 'w-full pb-4 text-xs text-[#00000080]',
             'label-md': 'w-full pb-3 text-md text-[#00000080]',
