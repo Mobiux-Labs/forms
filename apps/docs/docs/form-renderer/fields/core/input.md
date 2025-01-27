@@ -3,12 +3,6 @@ sidebar_label: 'Input'
 sidebar_position: 1
 ---
 
-:::tip[Note]
-
-This field is available as type `input`
-
-:::
-
 # Input Field
 
 The `InputField` component provides a versatile way to capture various types of single-line data input from users. It supports a wide range of input types, allowing developers to customize the input experience to meet specific application needs.
@@ -34,6 +28,11 @@ The `InputField` component provides a versatile way to capture various types of 
 :::danger[Warning]
 
 Input types like **checkbox**, **radio**, and **file** are not supported as they do need different kind of implementation
+
+See,
+
+- [Checkbox](https://mobiux-labs.github.io/forms/docs/form-renderer/fields/core/checkbox)
+- [Radio](https://mobiux-labs.github.io/forms/docs/form-renderer/fields/core/radio)
 
 :::
 
