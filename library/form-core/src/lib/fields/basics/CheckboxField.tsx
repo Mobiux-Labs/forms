@@ -1,6 +1,8 @@
-import { Controller, useFormContext } from 'react-hook-form';
+import { Controller } from 'react-hook-form';
 import { errorResolver } from '../../utils';
 import { CheckboxFieldDefinition, FieldProps } from '../../types/fields';
+
+const DEFAULT_VALUE = false;
 
 const CheckboxField = (props: FieldProps<CheckboxFieldDefinition>) => {
   const { styles, field, methods } = props || {};
@@ -19,7 +21,6 @@ const CheckboxField = (props: FieldProps<CheckboxFieldDefinition>) => {
     className,
     rules,
   } = field || {};
-  const { control } = useFormContext();
 
   const isStylesLoaded = Boolean(styles);
   const errorMessage = errorResolver(errors, formKey);
@@ -27,22 +28,14 @@ const CheckboxField = (props: FieldProps<CheckboxFieldDefinition>) => {
   return isStylesLoaded ? (
     <Controller
       name={formKey}
-      control={control}
+      control={methods.control}
       rules={rules}
       render={({ field }) => {
         return (
           <div
-            style={{ display: visibility == 'hidden' ? 'none' : 'block' }}
+            style={{ display: visibility === 'hidden' ? 'none' : 'block' }}
             className={className}
           >
-            {label && (
-              <label
-                htmlFor={formKey}
-                className={styles?.[style?.label]}
-              >
-                {label}
-              </label>
-            )}
             <input
               className={styles?.[style?.input]}
               type={type}
@@ -52,9 +45,17 @@ const CheckboxField = (props: FieldProps<CheckboxFieldDefinition>) => {
                 field.onChange(checked);
                 if (typeof onChange == 'function') onChange(checked);
               }}
-              checked={field.value}
+              checked={field.value || DEFAULT_VALUE}
               disabled={disabled || field.disabled}
             />
+            {label && (
+              <label
+                htmlFor={formKey}
+                className={styles?.[style?.label]}
+              >
+                {label}
+              </label>
+            )}
             {!!errorMessage && <label htmlFor={formKey}>{errorMessage}</label>}
           </div>
         );
