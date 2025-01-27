@@ -23,7 +23,21 @@ const setupField = (props: FieldProps<FieldDefinition>, Component: any) => {
 };
 
 // Register components for specific field types
-fieldRegistry.set('input', (props) => setupField(props, InputField));
+fieldRegistry.set('text', (props) => setupField(props, InputField));
+fieldRegistry.set('password', (props) => setupField(props, InputField));
+fieldRegistry.set('email', (props) => setupField(props, InputField));
+fieldRegistry.set('number', (props) => setupField(props, InputField));
+fieldRegistry.set('tel', (props) => setupField(props, InputField));
+fieldRegistry.set('url', (props) => setupField(props, InputField));
+fieldRegistry.set('search', (props) => setupField(props, InputField));
+fieldRegistry.set('date', (props) => setupField(props, InputField));
+fieldRegistry.set('time', (props) => setupField(props, InputField));
+fieldRegistry.set('datetime-local', (props) => setupField(props, InputField));
+fieldRegistry.set('month', (props) => setupField(props, InputField));
+fieldRegistry.set('week', (props) => setupField(props, InputField));
+fieldRegistry.set('color', (props) => setupField(props, InputField));
+fieldRegistry.set('range', (props) => setupField(props, InputField));
+fieldRegistry.set('hidden', (props) => setupField(props, InputField));
 fieldRegistry.set('checkbox', (props) => setupField(props, CheckboxField));
 fieldRegistry.set('array', (props) => setupField(props, ArrayFields));
 

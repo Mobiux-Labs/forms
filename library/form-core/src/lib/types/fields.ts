@@ -7,6 +7,7 @@ import {
   ArrayFieldProps,
   ArrayFieldStyleProps,
 } from '../fields/basics/ArrayFields';
+import { InputFieldTypes } from '../fields/basics/InputField';
 
 // Exporting the generic FieldDefinition type
 export type FieldDefinitionBase<T extends string, V, P, S> = {
@@ -37,7 +38,7 @@ export type TypographyBase<T extends string, P, S> = Omit<
 
 // Exporting specific implementations of FieldDefinition
 export type InputFieldDefinition = FieldDefinitionBase<
-  'input', // Field type for rendering an input component
+  InputFieldTypes, // Field type for rendering an input component
   string, // Value type for the input field
   React.InputHTMLAttributes<HTMLInputElement>, // Props specific to an input element
   { input: string; label: string; error: string } // Style object for the input and label

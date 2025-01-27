@@ -2,6 +2,23 @@ import { Controller, useFormContext } from 'react-hook-form';
 import { errorResolver } from '../../utils';
 import { FieldProps, InputFieldDefinition } from '../../types/fields';
 
+export type InputFieldTypes =
+  | 'text'
+  | 'password'
+  | 'email'
+  | 'number'
+  | 'tel'
+  | 'url'
+  | 'search'
+  | 'date'
+  | 'time'
+  | 'datetime-local'
+  | 'month'
+  | 'week'
+  | 'color'
+  | 'range'
+  | 'hidden';
+
 const InputField = (props: FieldProps<InputFieldDefinition>) => {
   const { styles, field, methods } = props || {};
   const {
