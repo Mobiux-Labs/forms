@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const devMode = process.env.NODE_ENV == 'development';
 
 const config: Config = {
   title: '@mobiux-labs',
@@ -12,7 +13,7 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://mobiux-labs-form.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/forms',
+  baseUrl: devMode ? '/' : '/forms',
 
   // GitHub pages deployment config.
   organizationName: 'Mobiux-Labs', // Your GitHub org/user name.

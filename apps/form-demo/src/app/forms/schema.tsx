@@ -23,7 +23,7 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
     {
       formKey: 'first_name',
       label: 'First Name',
-      type: 'input',
+      type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
       onChange: (value: string) => {
         const lastName = formData?.last_name || '';
@@ -33,7 +33,7 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
     {
       formKey: 'last_name',
       label: 'Last Name',
-      type: 'input',
+      type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
       onChange: (value: string) => {
         const firstName = formData?.first_name || '';
@@ -43,19 +43,19 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
     {
       formKey: 'full_name',
       label: 'Full Name',
-      type: 'input',
+      type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
     },
     {
       formKey: 'temp_address',
       label: 'Temporary Address ',
-      type: 'input',
+      type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
     },
     {
       formKey: 'perm_address',
       label: 'Permanent Address ',
-      type: 'input',
+      type: 'text',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
       visibility: formData?.hide_perm_address ? 'hidden' : 'visible',
       rules: {
@@ -245,7 +245,7 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
         renderRemoveButton: <Trash size={18} />,
         fields: [
           {
-            type: 'input',
+            type: 'text',
             formKey: 'name',
             label: 'Name',
             className: 'mt-1',
@@ -257,10 +257,21 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
             },
           },
           {
-            type: 'input',
+            type: 'email',
             formKey: 'email',
             label: 'Email',
             className: 'mt-1',
+            style: {
+              input: 'input-md',
+              label: 'label-sm',
+              error: 'error-text',
+            },
+          },
+
+          {
+            formKey: 'password',
+            label: 'Password',
+            type: 'password',
             style: {
               input: 'input-md',
               label: 'label-sm',
