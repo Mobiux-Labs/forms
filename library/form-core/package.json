@@ -1,6 +1,6 @@
 {
   "name": "@mobiux-labs/form-core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A core library for form handling in React applications.",
   "main": "./index.js",
   "module": "./index.mjs",
