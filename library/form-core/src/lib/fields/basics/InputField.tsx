@@ -19,6 +19,8 @@ export type InputFieldTypes =
   | 'range'
   | 'hidden';
 
+const DEFAULT_VALUE = '';
+
 const InputField = (props: FieldProps<InputFieldDefinition>) => {
   const { styles, field, methods } = props || {};
   const {
@@ -68,7 +70,7 @@ const InputField = (props: FieldProps<InputFieldDefinition>) => {
                 field.onChange(value);
                 if (typeof onChange == 'function') onChange(value);
               }}
-              value={field.value}
+              value={field.value || DEFAULT_VALUE}
               disabled={disabled || field.disabled}
               {...fieldProps}
             />
