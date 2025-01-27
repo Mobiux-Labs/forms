@@ -48,8 +48,6 @@ Input types like **checkbox**, **radio**, and **file** are not supported as they
 
 To use the `Input Field`, define its properties in the field definition JSON. Below is an example of how to configure a text input field:
 
-### Text Input
-
 ```tsx
 {
   "formKey": "username",

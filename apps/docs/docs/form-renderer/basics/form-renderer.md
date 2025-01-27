@@ -45,7 +45,7 @@ const MyForm = () => {
       styles={{ input: 'input-class', button: 'button-class' }}
       defaultValues={{ name: '', email: '' }}
     >
-      {/* FormFields components go here. You can have multiple FormField. */}
+      {/* FormFields components goes here. You can have multiple FormField. */}
     </FormRenderer>
   );
 };
