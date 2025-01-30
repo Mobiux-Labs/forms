@@ -55,7 +55,7 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
     {
       formKey: 'temp_address',
       label: 'Temporary Address ',
-      type: 'text',
+      type: 'textarea',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
       onChange: (value: string) => {
         if (formData?.same_as_temp) {
@@ -66,7 +66,7 @@ const formSchema: (prop: Props) => ReturnType = (props: Props) => {
     {
       formKey: 'perm_address',
       label: 'Permanent Address ',
-      type: 'text',
+      type: 'textarea',
       style: { input: 'input-md', label: 'label-sm', error: 'error-text' },
       visibility: formData?.hide_perm_address ? 'hidden' : 'visible',
       rules: {
