@@ -3,42 +3,31 @@ sidebar_label: 'Button'
 sidebar_position: 3
 ---
 
-:::danger[Note]
-
-This field is not available now, it is still in development stage
-
-:::
-
 # Button Field
 
-The Button Field component is used to render a clickable button within a form. It is designed to trigger form submissions or other actions, providing a customizable and interactive element for users.
+The Button Field is a versatile component designed to handle user interactions within forms. It can be customized with various styles and properties to fit the needs of your application.
 
 ## Features
 
-- **Customizable Styles**: Supports custom styling for the button to match the form's design.
-- **Event Handling**: Provides an `onClick` event to handle button clicks.
-- **Disabled State**: Can be configured to be disabled based on form state or other conditions.
-- **Label Support**: Allows setting a label for the button to indicate its purpose.
+- **Customizable Styles**: Apply custom styles to the button using the `style` property.
+- **Flexible Props**: Accepts standard HTML button attributes and custom properties.
+- **Visibility Control**: Easily show or hide the button using the `visibility` property.
+- **Event Handling**: Define custom behavior for button clicks with the `onClick` property.
 
 ## Usage
 
-To use the Button Field, define its properties in the field definition JSON. Below is an example of how to configure a button field:
+Below is an example of how to define a Button Field using the `ButtonFieldDefinition` interface.
 
 ```tsx
 {
-  "formKey": "submitButton",
-  "type": "button",
-  "style": {
-    "button": "button-class",
-    "label": "button-label-class"
-  },
-  "fieldProps": {
-    "type": "submit"
-  },
-  "onClick": () => console.log('Button clicked'),
-  "label": "Submit",
-  "disabled": false,
-  "visibility": "visible",
-  "className": "custom-button-class"
+  type: 'button', // or 'submit', 'reset'
+  style: { button: 'button-class' }, // optional
+  fieldProps: { onClick: (event) => console.log(event) }, // optional
+  label: 'Click me', // optional
+  disabled: false, // optional
+  visibility: 'visible', // optional
+  className: 'custom-class', // optional
 }
 ```
+
+> **Note**: The `onClick` function inside `fieldProps` is used to handle button click events. Ensure that the function is defined to perform the desired action when the button is clicked.
