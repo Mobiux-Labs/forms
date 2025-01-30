@@ -3,12 +3,6 @@ sidebar_label: 'Textarea'
 sidebar_position: 2
 ---
 
-:::danger[Note]
-
-This field is not available now, it is still in development stage
-
-:::
-
 # Text-Area Field
 
 The Text-Area Field component is designed to render a multi-line text input within a form. It provides a flexible and customizable way to capture larger text inputs from users, such as comments or descriptions.
