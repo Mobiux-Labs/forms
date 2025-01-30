@@ -1,4 +1,5 @@
 import { FieldErrors } from 'react-hook-form';
+import { Visibility } from './types/fields';
 
 export const errorResolver = (
   errors: FieldErrors,
@@ -18,4 +19,8 @@ export const errorResolver = (
   }
 
   return currentError.message || null;
+};
+
+export const visibilityResolver = (visibility: Visibility | undefined) => {
+  return { display: visibility === 'hidden' ? 'none' : 'block' };
 };
