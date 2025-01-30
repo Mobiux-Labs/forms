@@ -9,6 +9,7 @@ import {
 } from '@mobiux-labs/form-core';
 import CustomColorField from './custom-fields/CustomColorField';
 import SelectField from '@mobiux-labs/form-field-select';
+import ReactJson from 'react-json-view';
 
 // Initialize the SelectField component
 SelectField.init(FieldRegistry);
@@ -92,7 +93,10 @@ const FormsPage = () => {
                 State data{' '}
               </h4>
               {formState?.formData && (
-                <pre>{JSON.stringify(formState?.formData, null, 2)}</pre>
+                <ReactJson
+                  src={formState?.formData}
+                  theme={'colors'}
+                />
               )}
             </div>
 
@@ -101,7 +105,10 @@ const FormsPage = () => {
                 <h4 className='w-full mb-2 px-3 py-1 bg-green-200'>
                   Submited data
                 </h4>
-                <pre>{JSON.stringify(submitData, null, 2)}</pre>
+                <ReactJson
+                  src={submitData}
+                  theme={'grayscale:inverted'}
+                />
               </div>
             )}
           </div>
