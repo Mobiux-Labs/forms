@@ -63,6 +63,7 @@ Pass the data to the components using `FormRenderer` and `FormFields`.
     formName='myForm'
     definitions={fieldDefinitions}
   />
+  <button type='submit'> Submit </button>
 </FormRenderer>
 ```
 
