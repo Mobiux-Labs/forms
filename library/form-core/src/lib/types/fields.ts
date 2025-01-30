@@ -10,6 +10,8 @@ import {
 import { InputFieldTypes } from '../fields/basics/InputField';
 import { RadioFieldDefinition } from '../fields/basics/RadioField';
 
+export type Visibility = 'visible' | 'hidden';
+
 // Exporting the generic FieldDefinition type
 export type FieldDefinitionBase<T extends string, V, P, S> = {
   formKey: string; // A unique identifier for registering the field with react-hook-form
@@ -19,12 +21,19 @@ export type FieldDefinitionBase<T extends string, V, P, S> = {
   onChange?: (value: V) => void; // A required function to handle changes, receiving the field's value
   label?: string;
   disabled?: boolean;
-  visibility?: 'visible' | 'hidden';
+  visibility?: Visibility;
   className?: string;
   rules?: Omit<
     RegisterOptions,
     'valueAsNumber' | 'valueAsDate' | 'setValueAs' | 'disabled'
   >;
+};
+
+export type ButtonBase<T extends string, V, P, S> = Omit<
+  FieldDefinitionBase<T, V, P, S>,
+  'formKey' | 'rules' | 'onChange'
+> & {
+  label: string;
 };
 
 export type LayoutAndSpacersBase<T extends string, P, S> = Omit<
@@ -80,6 +89,16 @@ export type ArrayFieldDefinition = FieldDefinitionBase<
   ArrayFieldStyleProps // Style object for the select and label
 > & { fieldProps: ArrayFieldProps };
 
+export type ButtonFieldDefinition = ButtonBase<
+  'submit' | 'reset' | 'button', // Field type for rendering array of fields component
+  React.MouseEvent<HTMLButtonElement>,
+  Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    'type' | 'disabled' | 'className'
+  >, // Props specific to a array element
+  { button: string } // Style object for the select and label
+>;
+
 export type FieldProps<T> = {
   field: T;
   styles: { [key: string]: string };
@@ -101,4 +120,5 @@ export type FieldDefinition =
   | NumberFieldDefinition
   | ArrayFieldDefinition
   | LayoutAndSpacers
-  | Typography;
+  | Typography
+  | ButtonFieldDefinition;

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ArrayFields from './fields/basics/ArrayFields';
+import ButtonField from './fields/basics/ButtonField';
 import CheckboxField from './fields/basics/CheckboxField';
 import FileField from './fields/basics/FileField';
 import InputField from './fields/basics/InputField';
@@ -46,6 +47,9 @@ fieldRegistry.set('textarea', (props) => setupField(props, TextareaField));
 fieldRegistry.set('checkbox', (props) => setupField(props, CheckboxField));
 fieldRegistry.set('radio', (props) => setupField(props, RadioField));
 fieldRegistry.set('array', (props) => setupField(props, ArrayFields));
+fieldRegistry.set('button', (props) => setupField(props, ButtonField));
+fieldRegistry.set('submit', (props) => setupField(props, ButtonField));
+fieldRegistry.set('reset', (props) => setupField(props, ButtonField));
 
 // Layout, spacers and typography components
 fieldRegistry.set('container', (props) => setupField(props, ContainerField));

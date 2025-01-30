@@ -56,6 +56,7 @@ export const FormRenderer = <T,>({
       <form
         onSubmit={methods.handleSubmit(handleSubmit)}
         className={className}
+        name={formName}
       >
         {children}
       </form>
