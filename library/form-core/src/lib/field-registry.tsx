@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ArrayFields from './fields/basics/ArrayFields';
 import CheckboxField from './fields/basics/CheckboxField';
+import FileField from './fields/basics/FileField';
 import InputField from './fields/basics/InputField';
 import RadioField from './fields/basics/RadioField';
 import TextareaField from './fields/basics/TextareaField';
@@ -40,6 +41,7 @@ fieldRegistry.set('week', (props) => setupField(props, InputField));
 fieldRegistry.set('color', (props) => setupField(props, InputField));
 fieldRegistry.set('range', (props) => setupField(props, InputField));
 fieldRegistry.set('hidden', (props) => setupField(props, InputField));
+fieldRegistry.set('file', (props) => setupField(props, FileField));
 fieldRegistry.set('textarea', (props) => setupField(props, TextareaField));
 fieldRegistry.set('checkbox', (props) => setupField(props, CheckboxField));
 fieldRegistry.set('radio', (props) => setupField(props, RadioField));
