@@ -45,6 +45,13 @@ export type InputFieldDefinition = FieldDefinitionBase<
   { input: string; label: string; error: string } // Style object for the input and label
 >;
 
+export type TextareaFieldDefinition = FieldDefinitionBase<
+  'textarea', // Field type for rendering an input component
+  string, // Value type for the input field
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>, // Props specific to an input element
+  { input: string; label: string; error: string } // Style object for the input and label
+>;
+
 export type CheckboxFieldDefinition = FieldDefinitionBase<
   'checkbox', // Field type for rendering an input component
   boolean, // Value type for the checkbox field
@@ -80,6 +87,7 @@ type Typography = HeadingFieldDefinition | ParagraphFieldDefinition;
 // Union type that can be any of the specific field definitions
 export type FieldDefinition =
   | InputFieldDefinition
+  | TextareaFieldDefinition
   | CheckboxFieldDefinition
   | RadioFieldDefinition
   | NumberFieldDefinition
